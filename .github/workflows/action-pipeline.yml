@@ -36,6 +36,7 @@ jobs:
         REPOSITORY: primuslearning
         IMAGE_TAG: 1.1
       run: |
+        echo ${{ steps.login-ecr.outputs }}
         docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
         docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
 
