@@ -47,8 +47,9 @@ jobs:
     
     - name: Deploy to EKS
       run: |
+        ls -la ./
+        ls -la /home/runner
         cat /home/runner/.kube/config
-        ls -la /home/runner/
         aws sts get-caller-identity
         kubectl cluster-info dump
         kubectl cluster-info --kubeconfig /home/runner/.kube/config
