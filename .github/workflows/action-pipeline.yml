@@ -49,6 +49,6 @@ jobs:
       run: |
         cat /home/runner/.kube/config
         aws sts get-caller-identity
-        kubectl cluster-info
+        kubectl cluster-info --kubeconfig /home/runner/.kube/config
         kubectl apply -f deployment.yaml
         kubectl apply -f service.yaml
