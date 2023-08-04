@@ -23,7 +23,7 @@ jobs:
       id: install
 
     - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
+      uses: aws-actions/configure-aws-credentials@v2
       with:
         role-to-assume: arn:aws:iam::524913993838:role/Github-action-OIDC
         role-session-name: samplerolesession
